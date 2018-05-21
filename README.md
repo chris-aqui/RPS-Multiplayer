@@ -1,8 +1,8 @@
-# Online Rock Paper Scissors game :video-game:
+# Online Rock Paper Scissors game :video_game:
 
 * Find a friend to play with
 * Share link
 * Enter name
 * follow instructions
 
-| :trophy: | :video-game: | :trophy: |
+| :trophy: | :video_game: | :trophy: |
