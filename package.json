@@ -1,0 +1,26 @@
+{
+  "name": "rps-multiplayer",
+  "version": "1.0.0",
+  "description": "* Find a friend to play with\r * Share link\r * Enter name\r * follow instructions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christine-aqui/RPS-Multiplayer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christine-aqui/RPS-Multiplayer/issues"
+  },
+  "homepage": "https://github.com/christine-aqui/RPS-Multiplayer#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

@@ -11,22 +11,43 @@
   <!--  -->
   <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
   <!--  -->
+  <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <!--  -->
-  <title>Document</title>
+  <title>Ro-Sham-Bo</title>
   <!--  -->
 </head>
 <!--  -->
 
 <body>
-  <div class="title"></div>
-  <!--  -->
-  <div class="container">
-    <div id="playerA"></div>
-    <div id="whoseTurn"></div>
-    <div id="playerB"></div>
+  <div class="main">
+    <!--  -->
+    <div class="title">
+      <h1>Rock Paper Scissors</h1>
+    </div>
+    <!--  -->
+    <div class="container">
+      <!--  -->
+      <div id="playerA" class="gameBox">
+        <img src="./assets/image/anon.png" alt="Player Unknown">
+        <h3 class="paSpacing">Player Unknown</h3>
+        <input type="text" name="playerName" id="userNameA" placeholder="Enter Player 1 name">
+      </div>
+      <!--  -->
+      <div id="whoseTurn" class="gameBox">
+        <img src="./assets/image/dancing_banana.gif_c200" alt="dancing banana">
+      </div>
+      <!--  -->
+      <div id="playerB" class="gameBox">
+        <img src="./assets/image/anon.png" alt="Player Unknown">
+        <h3 class="paSpacing">Player Unknown</h3>
+        <input type="text" name="playerName" id="userNameB" placeholder="Enter Player 2 name">
+
+      </div>
+      <!--  -->
+    </div>
+    <!--  -->
   </div>
-  <!--  -->
   <!--  -->
   <script src="./assets/javascript/script.js"></script>
 </body>
