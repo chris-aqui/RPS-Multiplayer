@@ -29,7 +29,7 @@ input {
   background-color: rgb(245, 245, 245);
 }
 
-.container {
+.container1 {
   display: flex;
   flex-flow: row wrap;
 }
