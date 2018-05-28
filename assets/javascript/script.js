@@ -22,31 +22,32 @@
   ];
   // Get a reference to the database service
   var database = firebase.database();
-
-  var data;
-
+  var gameData;
   database.ref().on("value", function (snapshot) {
-    // console.log(snapshot.val());
-    data = snapshot.val();
-    players = snapshot.val().players;
-
-    // console.log('my data is ' + data);
+    gameData = snapshot.val();
+    console.log(gameData);
+    console.log(gameData[0].image);
   });
+  //
   //
   document.addEventListener('DOMContentLoaded', function () {
     // At the initial load and on subsequent data value changes,
-    // get a snapshot of the current data. (I.E FIREBASE HERE)
+    // get a snapshot of the current data.
     // This callback keeps the page updated when a value changes in firebase.
     database.ref().on('value', function (snapshot) {
       // Change the values to match the value in the database
-      players = snapshot.val();
-      console.log('My snapshot ' + players);
+      var gameData = snapshot.val();
+      console.log('My snapshot 0 ', players[0]);
+      console.log('My snapshot 1 ', players[1]);
+//
+      console.log('is my game data here ', gameData);
+      document.getElementById('userHNameA').innerHTML = gameData[0].name;
+      document.getElementById('userHNameB').innerHTML = gameData[1].name;
     });
-    //
-    document.getElementById('userHNameA').innerHTML = players[0].name;
-    document.getElementById('userHNameB').innerHTML = players[1].name;
   });
-  //player 1
+//
+//
+//player 1
   document.querySelector('#userNameA').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) { // 13 is enter
@@ -66,9 +67,35 @@
     }
   });
 
-
-
-
+$("#pRock").on('click', function(e){
+  players[0].choice = 'rock';
+  console.log('player picked rock');
+});
+  //
+$("#pPaper").on('click', function(e){
+  players[0].choice = 'paper';
+  console.log('player picked papper');
+});
+  //
+$("#pScissors").on('click', function(e){
+  players[0].choice = 'scissors';
+  console.log('player picked scissors');
+});
+//
+$("#oRock").on('click', function(e){
+  players[1].choice = 'rock';
+  console.log('opponent picked rock');
+});
+  //
+$("#oPaper").on('click', function(e){
+  players[1].choice = 'paper';
+  console.log('opponent picked papper');
+});
+  //
+$("#oScissors").on('click', function(e){
+  players[1].choice = 'scissors';
+  console.log('opponent picked scissors');
+});
 
 
 

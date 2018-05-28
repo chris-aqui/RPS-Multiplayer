@@ -72,3 +72,12 @@ input {
   font-family: 'Bowlby One SC', cursive;
   font-size: 2em;
 }
+
+.reset-button {
+  min-width: 80%;
+  padding: auto;
+  background-color: #E1B07E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
