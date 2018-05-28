@@ -39,15 +39,15 @@
       var gameData = snapshot.val();
       console.log('My snapshot 0 ', players[0]);
       console.log('My snapshot 1 ', players[1]);
-//
+      //
       console.log('is my game data here ', gameData);
       document.getElementById('userHNameA').innerHTML = gameData[0].name;
       document.getElementById('userHNameB').innerHTML = gameData[1].name;
     });
   });
-//
-//
-//player 1
+  //
+  //
+  //player 1
   document.querySelector('#userNameA').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
     if (key === 13) { // 13 is enter
@@ -66,49 +66,40 @@
       }
     }
   });
-
-$("#pRock").on('click', function(e){
-  players[0].choice = 'rock';
-  console.log('player picked rock');
-});
   //
-$("#pPaper").on('click', function(e){
-  players[0].choice = 'paper';
-  console.log('player picked papper');
-});
   //
-$("#pScissors").on('click', function(e){
-  players[0].choice = 'scissors';
-  console.log('player picked scissors');
-});
-//
-$("#oRock").on('click', function(e){
-  players[1].choice = 'rock';
-  console.log('opponent picked rock');
-});
   //
-$("#oPaper").on('click', function(e){
-  players[1].choice = 'paper';
-  console.log('opponent picked papper');
-});
+  $("#pRock").on('click', function (e) {
+    players[0].choice = 'rock';
+    console.log('player picked rock');
+  });
   //
-$("#oScissors").on('click', function(e){
-  players[1].choice = 'scissors';
-  console.log('opponent picked scissors');
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
+  $("#pPaper").on('click', function (e) {
+    players[0].choice = 'paper';
+    console.log('player picked papper');
+  });
+  //
+  $("#pScissors").on('click', function (e) {
+    players[0].choice = 'scissors';
+    console.log('player picked scissors');
+  });
+  //
+  $("#oRock").on('click', function (e) {
+    players[1].choice = 'rock';
+    console.log('opponent picked rock');
+  });
+  //
+  $("#oPaper").on('click', function (e) {
+    players[1].choice = 'paper';
+    console.log('opponent picked papper');
+  });
+  //
+  $("#oScissors").on('click', function (e) {
+    players[1].choice = 'scissors';
+    console.log('opponent picked scissors');
+  });
+  //
+  //
   // player 2
   document.querySelector('#userNameB').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
@@ -130,33 +121,11 @@ $("#oScissors").on('click', function(e){
       }
     }
   });
-
+  //
+  //
   // Whenever a user clicks the restart button
-$("#restart-button").on("click", function() {
-
-  // Save new value to Firebase
-  database.ref().set(players);
-
-  // Log the value of clickCounter
-  console.log(players);
-});
-
-  //
-  // var myKey = 'some API key';
-  // var queryURL = '';
-  // //
-  // $.ajax({
-  //   url: queryURL,
-  //   method: "GET"
-  // }).done(function (response) {
-  //   console.log(response);
-  // });
-  //
-  // Game Logic
-
-
-
-      // on webpage loaded
-    // set firebase
-    // database.ref().update(players);
-    //
+  $("#resetB").on("click", function () {
+    console.log('player reset game');
+    // Save new value to Firebase
+    database.ref().set(players);
+  });
