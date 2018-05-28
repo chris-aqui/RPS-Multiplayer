@@ -5,9 +5,9 @@
       name: 'Player Unknown',
       wins: 0,
       losses: 0,
-      turns: 0,
       choice: '',
-      image: 'assets/image/Player1.png'
+      image: 'assets/image/Player1.png',
+      online: false
     },
     {
       // player2
@@ -15,22 +15,12 @@
       name: 'Player Unknown',
       wins: 0,
       losses: 0,
-      turns: 0,
       choice: '',
-      image: 'assets/image/player2.png'
+      image: 'assets/image/player2.png',
+      online: false
     }
-
   ];
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAu-uybDqc5UnLbfS0UUiuBKYxttRfYSUQ",
-    authDomain: "rps-multiplayer-ca.firebaseapp.com",
-    databaseURL: "https://rps-multiplayer-ca.firebaseio.com",
-    projectId: "rps-multiplayer-ca",
-    storageBucket: "rps-multiplayer-ca.appspot.com",
-    messagingSenderId: "147823995701"
-  };
-  firebase.initializeApp(config);
+  // Get a reference to the database service
   var database = firebase.database();
 
   var data;
@@ -76,6 +66,22 @@
     }
   });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // player 2
   document.querySelector('#userNameB').addEventListener('keypress', function (e) {
     var key = e.which || e.keyCode;
@@ -97,6 +103,16 @@
       }
     }
   });
+
+  // Whenever a user clicks the restart button
+$("#restart-button").on("click", function() {
+
+  // Save new value to Firebase
+  database.ref().set(players);
+
+  // Log the value of clickCounter
+  console.log(players);
+});
 
   //
   // var myKey = 'some API key';

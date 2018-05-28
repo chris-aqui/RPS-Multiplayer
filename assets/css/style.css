@@ -1,7 +1,9 @@
 body {
   width: 100vw;
-  height: 100vh;
-  border: 1px solid red;
+  /* height: 100vh; */
+  /* border: 1px solid red; */
+  /* justify-content: center; */
+  background-color: #F5F5F5;
 }
 
 img {
@@ -11,10 +13,12 @@ img {
 }
 
 div {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   margin: 1rem;
   padding: 0.5rem;
 }
+
+/*  */
 
 input {
   text-align: center;
@@ -26,7 +30,8 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(245, 245, 245);
+  /* margin: 1rem; */
+  /* padding: 0.5rem; */
 }
 
 .container1 {
@@ -36,6 +41,7 @@ input {
 
 .gameBox {
   /* margin: auto; */
+  border-radius: 50px 20px;
 }
 
 #playerA,
@@ -50,4 +56,19 @@ input {
 
 .paSpacing {
   margin: 10px;
+}
+
+.gameCho {
+  background-color: #3A606E;
+  border-radius: 25px;
+}
+
+.gameOps {
+  background-color: #E1B07E;
+  border-radius: 50px 20px;
+}
+
+.title {
+  font-family: 'Bowlby One SC', cursive;
+  font-size: 2em;
 }
